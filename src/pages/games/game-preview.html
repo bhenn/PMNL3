@@ -1,0 +1,15 @@
+<ion-header>
+	<ion-toolbar>
+		<ion-title>Nova rodada</ion-title>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item *ngFor="let player of players | orderBy; let i = index ">
+			<p>{{i + 1}} {{player.name}} - {{player.pointsFinal}}</p>
+		</ion-item>	
+	</ion-list>
+	<button ion-button full (click)="close()">Fechar</button>
+</ion-content>
+
