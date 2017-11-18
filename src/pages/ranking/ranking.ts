@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RankingService } from '../../providers/ranking-service';
+import { TournamentService } from '../../providers/tournament-service';
 import { NavController , LoadingController , AlertController} from 'ionic-angular';
 import { Tournament } from '../tournament/tournament'
 
@@ -7,14 +7,14 @@ import { Tournament } from '../tournament/tournament'
 @Component({
   selector: 'page-ranking',
   templateUrl: 'ranking.html',
-  providers: [RankingService]
+  providers: [TournamentService]
 })
 export class RankingPage {
 
   tournaments: Array<Tournament>;
 
   constructor(public navCtrl: NavController, 
-    public rankingService: RankingService, 
+    public tournamentService: TournamentService, 
     public loadinCtrl: LoadingController,
     private alertCtrl: AlertController) {
     this.loadPlayers();
@@ -27,7 +27,7 @@ export class RankingPage {
 
     loading.present();
 
-    this.rankingService.getAll()
+    this.tournamentService.getAll()
     .subscribe(
       data => {
         this.tournaments = data;

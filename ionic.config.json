@@ -1,5 +1,8 @@
 {
   "name": "PMNL",
-  "app_id": "252179e7",
-  "type": "ionic-angular"
+  "app_id": "598b4590",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }

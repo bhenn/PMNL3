@@ -19,6 +19,13 @@
 			<ion-label fixed>Data</ion-label>
 			<ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="game.date"></ion-datetime>
 		</ion-item>
+		<ion-item>
+			<ion-label>Pontuaçao dobrada</ion-label>
+			<ion-toggle [(ngModel)]="game.doublePoints" (ionChange)="generatePreview()">
+			</ion-toggle>
+		</ion-item>
+
+
 	</ion-card>
 	<ion-card>
 		<ion-item><p>Entradas {{game.buyinns}}</p>

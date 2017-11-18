@@ -7,6 +7,7 @@ export class Game{
 	buyinns: number;
 	rebuys: number;
 	valueTotal: number;
+	doublePoints: boolean
 
 	tournamentId: number;
 	tournament: Tournament;
